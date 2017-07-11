@@ -999,3 +999,13 @@ Migrating to AddDirectorToMovie (20170711033232)
   [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170711033232')
   [1m[36m (6.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+
+
+Started GET "/" for 68.13.92.81 at 2017-07-11 04:04:35 +0000
+
+
+Started GET "/movies" for 68.13.92.81 at 2017-07-11 04:04:35 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (25.2ms)
+Completed 200 OK in 333ms (Views: 294.2ms | ActiveRecord: 2.9ms)
